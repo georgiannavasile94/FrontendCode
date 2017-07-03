@@ -1,0 +1,54 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add job</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="jobAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.job.$invalid }">
+                        <!--TODO#HR2-->
+                        <label for="job">Job Title:</label>
+                        <input class="form-control" id="job" ng-model="job.jobId" name="jobTitle" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.minSalary.$invalid }">
+                        <!--TODO#HR2-->
+                        <label for="minsalary">Min Salary:</label>
+                        <input class="form-control" id="minsalary" ng-model="job.,minSalary" name="minsalary" required>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.maxSalary.$invalid }">
+                        <!--TODO#HR2-->
+                        <label for="maxsalary">Max Salary:</label>
+                        <input class="form-control" id="maxsalary" ng-model="job.maxSalary" name="maxsalary" required>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <!--TODO#HR4-->
+                        <p>
+                            <a class="btn btn-primary btn-lg" role="button" ng-click="create(job)" ng-disabled="jobAddForm.$invalid">Save</a>
+                            <a class="btn btn-primary btn-lg" role="button" ng-click="reset()">Reset</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-form>
+    </div>
+</div>
